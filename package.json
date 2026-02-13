@@ -1,0 +1,25 @@
+{
+  "name": "enterprise-spark-mcp",
+  "version": "0.1.0",
+  "description": "Production-grade blueprint MCP server for Spark/YARN performance intelligence",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "lint": "node --check dist/index.js || true",
+    "package:artifact": "bash scripts/package-artifact.sh"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
